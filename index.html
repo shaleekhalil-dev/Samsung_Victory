@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsung Victory | سامسونج فيكتوري</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="notification-bar">
+        <span class="notify-text active"><i class="fas fa-truck"></i> توصيل مجاني لمدة أسبوع!</span>
+        <span class="notify-text"><i class="fas fa-credit-card"></i> متوفر الدفع الإلكتروني الآمن عبر جميع البطاقات</span>
+    </div>
+
+    <nav class="glass-nav">
+        <div class="logo">
+            <h1>Samsung <span>Victory</span></h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#hero">الرئيسية</a></li>
+            <li><a href="#categories">الأقسام</a></li>
+            <li><a href="#reserve">احجز الأحدث</a></li>
+            <li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+        <div class="cart-icon" onclick="toggleCart()">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+        </div>
+    </nav>
+
+    <div id="cart-modal" class="glass-modal">
+        <div class="cart-content">
+            <span class="close-btn" onclick="toggleCart()">&times;</span>
+            <h2>سلة المشتريات</h2>
+            <div class="cart-items">
+                <p>السلة فارغة حالياً</p>
+            </div>
+            <button class="checkout-btn">إتمام الطلب</button>
+        </div>
+    </div>
+
+    <header id="hero" class="hero-section">
+        <div class="hero-content glass-card glowing">
+            <h2>اكتشف الفخامة في عالم التقنية</h2>
+            <p>أحدث إصدارات سامسونج بتصميم يتخطى الخيال.</p>
+            <a href="#reserve" class="btn-primary">احجز أجدد الأجهزة الآن</a>
+        </div>
+    </header>
+
+    <section id="categories" class="categories-section">
+        <h2 class="section-title">أقسام المتجر</h2>
+        <div class="grid-container">
+            <div class="category-card glass-card fade-up">
+                <img src="https://images.unsplash.com/photo-1610945265064-3234eb351d17?auto=format&fit=crop&w=500&q=80" alt="هواتف ذكية">
+                <h3>الهواتف الذكية</h3>
+                <button class="add-to-cart-btn"><i class="fas fa-plus"></i> تصفح</button>
+            </div>
+            <div class="category-card glass-card fade-up">
+                <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=500&q=80" alt="أجهزة لوحية">
+                <h3>الأجهزة اللوحية</h3>
+                <button class="add-to-cart-btn"><i class="fas fa-plus"></i> تصفح</button>
+            </div>
+            <div class="category-card glass-card fade-up">
+                <img src="https://images.unsplash.com/photo-1605464315542-bda3e2f4e605?auto=format&fit=crop&w=500&q=80" alt="سماعات">
+                <h3>السماعات اللاسلكية</h3>
+                <button class="add-to-cart-btn"><i class="fas fa-plus"></i> تصفح</button>
+            </div>
+            <div class="category-card glass-card fade-up">
+                <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=500&q=80" alt="ساعات ذكية">
+                <h3>الساعات الذكية</h3>
+                <button class="add-to-cart-btn"><i class="fas fa-plus"></i> تصفح</button>
+            </div>
+            <div class="category-card glass-card fade-up">
+                <img src="https://images.unsplash.com/photo-1625842268584-8f3296236761?auto=format&fit=crop&w=500&q=80" alt="شاشة الحماية">
+                <h3>واقي الكسر (شاشة الحماية)</h3>
+                <button class="add-to-cart-btn"><i class="fas fa-plus"></i> تصفح</button>
+            </div>
+            <div class="category-card glass-card fade-up">
+                <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=500&q=80" alt="اكسسوارات">
+                <h3>الاكسسوارات</h3>
+                <button class="add-to-cart-btn"><i class="fas fa-plus"></i> تصفح</button>
+            </div>
+            <div class="category-card glass-card fade-up">
+                <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=500&q=80" alt="شواحن">
+                <h3>الشواحن السريعة</h3>
+                <button class="add-to-cart-btn"><i class="fas fa-plus"></i> تصفح</button>
+            </div>
+            <div class="category-card glass-card fade-up">
+                <img src="https://images.unsplash.com/photo-1527814050087-379381547330?auto=format&fit=crop&w=500&q=80" alt="أجهزة العرض">
+                <h3>أجهزة العرض والترفيه</h3>
+                <button class="add-to-cart-btn"><i class="fas fa-plus"></i> تصفح</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="reserve" class="reserve-section glass-card fade-up">
+        <h2>أحدث إصدارات Galaxy في انتظارك</h2>
+        <p>كن أول من يمتلك الجيل القادم من الأجهزة الذكية.</p>
+        <form class="reserve-form">
+            <input type="text" placeholder="الاسم الكامل" required>
+            <input type="tel" placeholder="رقم الهاتف" required>
+            <select>
+                <option>Galaxy S Series الجديد</option>
+                <option>Galaxy Z Fold / Flip الجديد</option>
+                <option>Galaxy Tab S الجديد</option>
+            </select>
+            <button type="submit" class="btn-primary">تأكيد الحجز المسبق</button>
+        </form>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">ابق على تواصل</h2>
+        <div class="contact-container glass-card fade-up">
+            <form class="contact-form">
+                <input type="email" placeholder="البريد الإلكتروني" required>
+                <textarea placeholder="رسالتك..." rows="4" required></textarea>
+                <button type="submit" class="btn-primary">إرسال</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="#" class="glass-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="glass-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="glass-icon"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="glass-icon"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p>&copy; 2026 Samsung Victory. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
